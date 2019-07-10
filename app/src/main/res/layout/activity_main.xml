@@ -1,450 +1,454 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="@drawable/bg_gradient">
 
-
-
-    tools:context=".MainActivity">
-
-    <LinearLayout
-        android:id="@+id/upper_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        >
-
-        <TextView
-            android:id="@+id/myProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/my_profile"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:gravity="top"
-            android:layout_gravity="center"
-            android:layout_margin="15dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="15dp"
-
-            >
-
-
-
-
-            <RelativeLayout
-                android:id="@+id/rightDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:id="@+id/dateOfBirth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/date_of_birth"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:gravity="center_horizontal"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <EditText
-                    android:id="@+id/dateBirth"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/dd_mm_yyyy"
-                    android:textColor="@color/darkGray"
-                    android:textSize="18sp"
-                    android:background="@drawable/round_corner_button"
-                    android:layout_below="@id/dateOfBirth"
-                    android:gravity="center"
-                    android:padding="10dp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/leftAge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                >
-                <TextView
-                    android:id="@+id/age"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/age"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:gravity="center_horizontal"
-                    android:layout_marginBottom="5dp" />
-
-                <TextView
-                    android:id="@+id/userAge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/darkGray"
-                    android:textSize="18sp"
-                    android:background="@drawable/round_corner_button"
-                    android:layout_below="@id/age"
-                    android:padding="10dp" />
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginBottom="15dp"
-
-            >
-
-            <RelativeLayout
-                android:id="@+id/rightHeight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:id="@+id/height"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/height"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:gravity="center_horizontal"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5dp"
-                    />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/height"
-                    android:background="@drawable/round_corner_button"
-                    android:gravity="center"
-                    android:hint="000"
-                    android:padding="10dp"
-                    android:textColor="@color/darkGray"
-                    android:textSize="18sp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/leftWeight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                >
-                <TextView
-                    android:id="@+id/weight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/weight"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:gravity="center_horizontal"
-                    android:layout_marginBottom="5dp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/darkGray"
-                    android:textSize="18sp"
-                    android:hint="000"
-                    android:gravity="center"
-                    android:background="@drawable/round_corner_button"
-                    android:layout_below="@id/weight"
-                    android:padding="10dp" />
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_marginBottom="15dp"
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                >
-                <TextView
-                    android:id="@+id/bmi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bmi"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:gravity="center_horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:layout_toRightOf="@id/bmi"
-                    />
-
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/darkGray"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:background="@drawable/round_corner_button"
-                android:layout_below="@id/bmi"
-                android:padding="10dp" />
-
-
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/trainingLevel"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/white"
-    android:layout_below="@id/upper_menu"
-    >
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/myProfile"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/my_profile"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="@string/training_level"
-        android:gravity="center"
-        android:padding="15dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/dateOfBirth"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/date_of_birth"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/userDate"
+        app:layout_constraintEnd_toStartOf="@+id/userAge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfile" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/age"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/userAge"
+        app:layout_constraintTop_toBottomOf="@+id/myProfile" />
+
+    <EditText
+        android:id="@+id/userDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_corner_button"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/dd_mm_yyyy"
+        android:inputType="date"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/darkGray"
+        android:textColorHighlight="@color/darkGray"
+        android:textColorHint="@color/darkGray"
+        android:textColorLink="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/userAge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirth" />
+
+    <TextView
+        android:id="@+id/userAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/darkGray"
+        android:textColorHighlight="@color/darkGray"
+        android:textColorHint="@color/darkGray"
+        android:textColorLink="@color/darkGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userDate"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/height"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/userAge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDate" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/weight"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/userAge"
+        app:layout_constraintTop_toBottomOf="@+id/userAge" />
+
+    <EditText
+        android:id="@+id/userHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/zero"
+        android:inputType="number"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/darkGray"
+        android:textColorHighlight="@color/darkGray"
+        android:textColorHint="@color/darkGray"
+        android:textColorLink="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/userAge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <EditText
+        android:id="@+id/userWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/zero"
+        android:inputType="number"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/darkGray"
+        android:textColorHighlight="@color/darkGray"
+        android:textColorHint="@color/darkGray"
+        android:textColorLink="@color/darkGray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userHeight"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/bmi"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/bmiResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userHeight" />
+
+    <TextView
+        android:id="@+id/bmiResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bmi"
+        app:layout_constraintTop_toBottomOf="@+id/userWeight" />
+
+    <TextView
+        android:id="@+id/bmiStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_corner_button"
+        android:gravity="center"
+        android:hint="@string/bmi_status"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/darkGray"
+        android:textColorHighlight="@color/darkGray"
+        android:textColorHint="@color/darkGray"
+        android:textColorLink="@color/darkGray"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiStatus"
+        app:srcCompat="@android:drawable/screen_background_light" />
+
+    <TextView
+        android:id="@+id/trainingLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@color/white"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        >
-        <Button
-            android:id="@+id/beginner"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/round_corner_button_grey"
-            android:textColor="@color/darkGray"
-            android:textSize="15sp"
-            android:text="@string/beginner"
-            android:layout_weight="1"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginEnd="15dp"
-            />
-        <Button
-            android:id="@+id/advanced"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/round_corner_button_grey"
-            android:textColor="@color/darkGray"
-            android:textSize="15sp"
-            android:text="@string/advanced"
-            android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="6dp"
+        android:text="@string/training_level"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiStatus" />
 
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginEnd="15dp"
-            />
+    <ToggleButton
+        android:id="@+id/spinning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/spinning"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/spinning"
+        android:textOn="@string/spinning"
+        app:layout_constraintEnd_toStartOf="@+id/trx"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/core" />
 
-    </LinearLayout>
+    <ToggleButton
+        android:id="@+id/advanced"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/advanced"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/advanced"
+        android:textOn="@string/advanced"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/beginner"
+        app:layout_constraintTop_toBottomOf="@+id/trainingLevel" />
 
+    <ToggleButton
+        android:id="@+id/beginner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/beginner"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/beginner"
+        android:textOn="@string/beginner"
+        app:layout_constraintEnd_toStartOf="@+id/advanced"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainingLevel" />
 
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/myPreferences"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@color/white"
-        android:layout_below="@id/trainingLevel"
-        >
+        android:gravity="center"
+        android:text="@string/preferences"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginner" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:text="@string/preferences"
-            android:gravity="center"
-            android:padding="15dp"
-            />
+    <ToggleButton
+        android:id="@+id/abs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/abs"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/abs"
+        android:textOn="@string/abs"
+        app:layout_constraintEnd_toStartOf="@+id/aerobics"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPreferences" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            >
-            <Button
-                android:id="@+id/abs"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/abs"
-                android:layout_weight="1"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
-            <Button
-                android:id="@+id/aerobics"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/aerobics"
-                android:layout_weight="1"
+    <ToggleButton
+        android:id="@+id/fatLose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/fat_lose"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/fat_lose"
+        android:textOn="@string/fat_lose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/core"
+        app:layout_constraintTop_toBottomOf="@+id/aerobics" />
 
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
+    <ToggleButton
+        android:id="@+id/aerobics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/aerobics"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/aerobics"
+        android:textOn="@string/aerobics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/abs"
+        app:layout_constraintTop_toBottomOf="@+id/myPreferences" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginTop="10dp"
-            >
-            <Button
-                android:id="@+id/core"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/core"
-                android:layout_weight="1"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
-            <Button
-                android:id="@+id/fatLose"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/fat_lose"
-                android:layout_weight="1"
+    <ToggleButton
+        android:id="@+id/trx"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/trx"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/trx"
+        android:textOn="@string/trx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinning"
+        app:layout_constraintTop_toBottomOf="@+id/fatLose" />
 
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
+    <Button
+        android:id="@+id/myWeeklyTraining"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/my_weekly_training"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trx" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginTop="10dp"
-            >
-            <Button
-                android:id="@+id/spinning"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/spinning"
-                android:layout_weight="1"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
-            <Button
-                android:id="@+id/trx"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/round_corner_button_grey"
-                android:textColor="@color/darkGray"
-                android:textSize="15sp"
-                android:text="@string/trx"
-                android:layout_weight="1"
-
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                />
-
-        </LinearLayout>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gradient_button"
-            android:text="@string/my_weekly_training"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            />
+    <ToggleButton
+        android:id="@+id/core"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/round_corner_button_grey"
+        android:text="@string/core"
+        android:textAllCaps="false"
+        android:textColor="@color/darkGray"
+        android:textOff="@string/core"
+        android:textOn="@string/core"
+        app:layout_constraintEnd_toStartOf="@+id/fatLose"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abs" />
 
 
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,4 +1,6 @@
 <resources>
+
+    //Strings for activity_main
     <string name="app_name">Train With Me</string>
     <string name="my_profile">MY PROFILE</string>
     <string name="date_of_birth">Date of Birth</string>
@@ -7,7 +9,7 @@
     <string name="user_age">User Age</string>
     <string name="height">Height (cm)</string>
     <string name="weight">Weight (kg)</string>
-    <string name="bmi">BMI</string>
+    <string name="bmi">BMI:</string>
     <string name="training_level">Training Level</string>
     <string name="beginner">Beginner</string>
     <string name="advanced">Advanced</string>
@@ -19,4 +21,13 @@
     <string name="spinning">Spinning</string>
     <string name="trx">TRX</string>
     <string name="my_weekly_training">MY WEEKLY TRAINING</string>
+    <string name="zero">000</string>
+    <string name="bmi_status">Weight Status</string>
+
+    //Strings for BMI status
+    <string name="under_weight">Under Weight</string>
+    <string name="healthy_weight">Healthy Weight</string>
+    <string name="over_weight">Overweight</string>
+    <string name="obese">Obese</string>
+
 </resources>
