@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/my_profile_icon"
+        android:icon="@drawable/my_profile_icon"
+        android:title="@string/my_profile_icon"
+        />
+
+    <item
+        android:id="@+id/my_weekly_training_icon"
+        android:icon="@drawable/my_weekly_training"
+        android:title="@string/my_weekly_training_icon"
+        />
+
+    <item
+        android:id="@+id/training_history_icon"
+        android:icon="@drawable/training_history"
+        android:title="@string/training_history_icon"
+        />
+</menu>
