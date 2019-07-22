@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment selectedFragment = null;
+
+
 
                     switch (menuItem.getItemId()){
                         case R.id.my_profile_icon:

@@ -1,5 +1,10 @@
 <resources>
 
+    //Strings for bottom navigation bar
+    <string name="my_profile_icon">My Profile</string>
+    <string name="my_weekly_training_icon">Weekly Training</string>
+    <string name="training_history_icon">Training History</string>
+
     //Strings for activity_main
     <string name="app_name">Train With Me</string>
     <string name="my_profile">MY PROFILE</string>
