@@ -52,6 +52,20 @@ public class MyProfileFragment extends Fragment {
 
         beginnerAdvancedGroup = view.findViewById(R.id.radioGroup_beginner_advanced);
 
+        beginnerAdvancedGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.beginner:
+                        Toast.makeText(getActivity(), "You Selected: beginner", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.advanced:
+                        Toast.makeText(getActivity(), "You Selected: advanced", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
+
 
         userDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,12 +193,6 @@ public class MyProfileFragment extends Fragment {
         return bmiLabel;
     }
 
-    public void checkButton(View view){
-        int radioId = beginnerAdvancedGroup.getCheckedRadioButtonId();
-        beginnerOrAdvanced = view.findViewById(radioId);
-        Toast.makeText(getActivity(), "You Selected: " + beginnerOrAdvanced.getText(), Toast.LENGTH_SHORT).show();
-
-    }
 
 
 
