@@ -15,3 +15,5 @@ public class TrainingHistoryFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_training_history,container,false);
     }
 }
+
+//to load trainings here - user Room Library for that

@@ -7,12 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
-
+import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -21,6 +22,10 @@ public class WeeklyTrainingFragment extends Fragment {
     View myFragment;
     ViewPager viewPager;
     TabLayout tabLayout;
+    Bundle bundle;
+    ArrayList<String> collectedExerciseList;
+
+
 
 
     public WeeklyTrainingFragment() {
@@ -35,6 +40,8 @@ public class WeeklyTrainingFragment extends Fragment {
 
         viewPager = myFragment.findViewById(R.id.viewPager);
         tabLayout = myFragment.findViewById(R.id.tabLayout);
+
+
 
 
 
@@ -80,12 +87,14 @@ public class WeeklyTrainingFragment extends Fragment {
         adapter.addFragment(new TuesdayFragment(), "Tue");
         adapter.addFragment(new WednesdayFragment(), "Wed");
         adapter.addFragment(new ThursdayFragment(), "Thu");
+        adapter.addFragment(new FridayFragment(), "Fri");
+        adapter.addFragment(new SaturdayFragment(), "Sat");
 
         viewPager.setAdapter(adapter);
 
-        viewPager.setCurrentItem(1, true);
+      viewPager.setCurrentItem(0, true);
 
-        Calendar calendar = Calendar.getInstance();
+       Calendar calendar = Calendar.getInstance();
         int dayOfTheWeek = calendar.get(Calendar.DAY_OF_WEEK);
         if (Calendar.SUNDAY == dayOfTheWeek) {
             viewPager.setCurrentItem(0, true);
@@ -98,13 +107,21 @@ public class WeeklyTrainingFragment extends Fragment {
         } else if (Calendar.THURSDAY == dayOfTheWeek) {
             viewPager.setCurrentItem(4, true);
         } else if (Calendar.FRIDAY == dayOfTheWeek) {
-            viewPager.setCurrentItem(4, true);
+            viewPager.setCurrentItem(5, true);
         } else if (Calendar.SATURDAY == dayOfTheWeek) {
-            viewPager.setCurrentItem(4, true);
+            viewPager.setCurrentItem(6, true);
         }
 
 
     }
+
+    public ArrayList<String> getArray(){
+        bundle = getArguments();
+        collectedExerciseList = bundle.getStringArrayList("collectedExerciseList");
+        return collectedExerciseList;
+    }
+
+
 
 
 

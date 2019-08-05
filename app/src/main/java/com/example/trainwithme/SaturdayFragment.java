@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TuesdayFragment extends Fragment {
+public class SaturdayFragment extends Fragment {
 
 
-    public TuesdayFragment() {
+    public SaturdayFragment() {
         // Required empty public constructor
     }
 
@@ -34,10 +34,8 @@ public class TuesdayFragment extends Fragment {
         get data from MyProfileFragment through MainActivity and use it to create recycler view
          */
 
-
         // Inflate the layout for this fragment
-        myFragment = inflater.inflate(R.layout.fragment_tuesday,container,false);
-
+        myFragment = inflater.inflate(R.layout.fragment_saturday,container,false);
 
 
 

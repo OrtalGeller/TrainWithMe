@@ -4,13 +4,16 @@ package com.example.trainwithme;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyProfileFragment.CollectExerciseListListener {
 
 
     @Override
@@ -52,4 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+
+    @Override
+    public void exerciseListSend(ArrayList<String> collectedExerciseList) {
+        WeeklyTrainingFragment weeklyTrainingFragment = new WeeklyTrainingFragment();
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("collectedExerciseList", collectedExerciseList);
+        weeklyTrainingFragment.setArguments(bundle);
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, weeklyTrainingFragment, null);
+        fragmentTransaction.commit();
+
+    }
 }

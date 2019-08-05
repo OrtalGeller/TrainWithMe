@@ -25,7 +25,7 @@
     <string name="fat_lose">Fat Lose</string>
     <string name="spinning">Spinning</string>
     <string name="trx">TRX</string>
-    <string name="my_weekly_training">NEXT</string>
+    <string name="save_and_next">SAVE AND NEXT</string>
     <string name="zero">000</string>
     <string name="bmi_status">Weight Status</string>
 
@@ -41,6 +41,12 @@
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
     <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+
+
+    <string name="finish_training">Finish Training</string>
+    <string name="today_training">Today Training</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
